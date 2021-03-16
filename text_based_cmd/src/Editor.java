@@ -1,15 +1,3 @@
-//Thomas tutoring
-//
-//SERC 358?
-//mon: 5-6
-//thurs: 2-3
-//-----------
-//Text Editor|
-//-----------
-//Part1:
-//	>ask user for line of text
-//	>If the line begins with an integer, the line will be entered into a linked list in order sorted by the line number used
-//		>If there is no number, the first word entered should be interpreted as a command
 //			>LIST - this should list the current lines
 //			>READ - should read data from a text file
 //			>SAVE - should save data to a text file
@@ -84,14 +72,7 @@ public class Editor
                 // Here we have a line of text to be entered. Write the code to
                 //insert it into the LLComp named theText.
                 TextLine lineToBeInserted = new TextLine(line);
-                /*for (int i = 0; i < theText.size(); i++) {
-                    if(lineToBeInserted.lineNum == theText.getAtInd(i).lineNum && lineToBeInserted.text == null){
-                        theText.remove(theText.getAtInd(i));
-                    }
-                    else if(lineToBeInserted.lineNum == theText.getAtInd(i).lineNum){
-                            theText.getAtInd(i).text = lineToBeInserted.text;
-                        }
-                }*/
+                
                 for (int i = 0; i < theText.size(); i++) {
                     if(lineToBeInserted.lineNum == theText.getAtInd(i).lineNum){
                         theText.getAtInd(i).text = lineToBeInserted.text;
@@ -142,13 +123,14 @@ public class Editor
         return retval;
     }
 
-	 /*You need to implement the following routines.
+	/*
 	>LIST - this should list the current lines
 	>READ - should read data from a text file
 	>SAVE - should save data to a text file
 	>RESEQUENCE - re-number all the lines starting from 10 and incrementing the line numbers by 10.
 	>EXIT
-	>QUIT - synonyms that cause the program to exit.*/
+	>QUIT - synonyms that cause the program to exit.
+	*/
 
     private void read()throws FileNotFoundException
     {
